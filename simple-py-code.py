@@ -4,29 +4,29 @@ import re
 
 # function to check the strength of password
 def check_password_strength(password):
-    missing_criterias = []
+    missing_criteria = []
     
     # check if the password length is less than 12 characters
     if len(password) < 12:
-        missing_criterias.append(">minimum password length is 12 characters.")
+        missing_criteria.append(">minimum password length is 12 characters.")
     
     # check if the password contains at least one uppercase letter
     if not re.search(r'[A-Z]', password):
-        missing_criterias.append(">at least one uppercase letter required.")
+        missing_criteria.append(">at least one uppercase letter required.")
     
     # check if the password contains at least one lowercase letter
     if not re.search(r'[a-z]', password):
-        missing_criterias.append(">at least one lowercase letter required.")
+        missing_criteria.append(">at least one lowercase letter required.")
     
     # check if the password contains at least one digit
     if not re.search(r'\d', password):
-        missing_criterias.append(">at least one digit required.")
+        missing_criteria.append(">at least one digit required.")
     
     # check if the password contains at least one special character
     if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
-        missing_criterias.append(">at least one special character required.")
+        missing_criteria.append(">at least one special character required.")
 
-    return missing_criterias
+    return missing_criteria
 
 # function to generate a random password
 def generate_random_password():
@@ -51,11 +51,11 @@ def main():
     password = input(">Enter new password: ")
     while True:
         # check the strength of the password
-        missing_criterias = check_password_strength(password)
-        if missing_criterias:
+        missing_criteria = check_password_strength(password)
+        if missing_criteria:
             # if the password doesn't meet the criteria, display the missing criteria
             print(">Password doesn't meet the following criteria: ")
-            for criteria in missing_criterias:
+            for criteria in missing_criteria:
                 print(criteria)
             
             # ask the user if they want to generate a random password
