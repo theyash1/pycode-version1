@@ -24,7 +24,7 @@ document.getElementById('checkStrength').addEventListener('click', function() {
         if (data.isValid) {
             resultDiv.innerHTML = 'Password is strong and meets all criteria!';
         } else {
-            resultDiv.innerHTML = 'Password doesn't meet the following criteria:<br>';
+            resultDiv.innerHTML = 'Password doesn\'t meet the following criteria:<br>';
             resultDiv.innerHTML += data.missingCriteria.join('<br>');
         }
     })
