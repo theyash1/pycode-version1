@@ -1,4 +1,7 @@
 # The Python script, integrated into a Flask web application as described, provides the following functionality for the end-user
+
+<img width="660" height="624" alt="img-1" src="https://github.com/user-attachments/assets/b2a4f57c-baf7-4961-9201-42337e6fa5d4" />
+
 1. Password Strength Validation:
 - User Input: The user enters a password via a web form.
 - Backend (Flask): The backend (Flask server) will receive this password and check if it meets the required strength criteria:
@@ -52,4 +55,3 @@ The end-user gets a secure, easy-to-use password management tool that:
    - Provides feedback on what to fix.
    - Offers a way to generate a strong password if needed.
    - Ensures the password is stored securely if used in a real authentication system.
-    
